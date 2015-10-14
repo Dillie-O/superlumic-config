@@ -11,5 +11,5 @@ galaxy_info:
   categories:
     - system
 dependencies:
-  - dillieo.superlumic-computername
-  - dillieo.superlumic-cli
+  - roderik.superlumic-computername
+  - roderik.superlumic-cli
