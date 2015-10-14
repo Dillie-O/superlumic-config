@@ -11,8 +11,8 @@
         - alfred
         - skype
         - superduper
-        - virtualbox
-        - vagrant
+        - handbrake
+        - flux
     - name: create ssh directory
       become: yes
       file:
@@ -28,16 +28,6 @@
       copy:
         src: files/ssh_config
         dest: /etc/ssh_config
-    - name: add to sudoers without password
-      become: yes
-      lineinfile: >
-        dest=/etc/sudoers
-        regexp="{{ item.regexp }}"
-        line="{{ item.line }}"
-        state=present
-        create=true
-      with_items:
-        - { regexp: '^dillieo’, line: ‘dillieo ALL=(ALL) NOPASSWD: ALL' }
 
   roles:
     - profile-all
